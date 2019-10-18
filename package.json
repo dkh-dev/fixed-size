@@ -1,0 +1,36 @@
+{
+  "name": "@dkh-dev/fixed-size",
+  "version": "1.0.0",
+  "description": "Fixed-size sets and maps",
+  "main": "index.js",
+  "files": [
+    "index.js",
+    "set.js",
+    "map.js"
+  ],
+  "scripts": {
+    "test": "node test",
+    "prepublish": "npm run test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/dkh-dev/fixed-size.git"
+  },
+  "devDependencies": {
+    "tape": "^4.9.2"
+  },
+  "keywords": [
+    "fixed-size",
+    "capped",
+    "cap",
+    "set",
+    "array",
+    "map"
+  ],
+  "author": "Hoang <dangkyokhoang@gmail.com> (https://dangkyokhoang.github.io/)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dkh-dev/fixed-size/issues"
+  },
+  "homepage": "https://github.com/dkh-dev/fixed-size#readme"
+}
