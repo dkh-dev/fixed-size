@@ -1,7 +1,7 @@
 'use strict'
 
 class FixedSizeMap extends Map {
-    constructor(maxSize = 9007199254740991) {
+    constructor(maxSize = 4294967296) {
         super()
 
         if (maxSize < 1) {
@@ -12,14 +12,14 @@ class FixedSizeMap extends Map {
     }
 
     set(key, value) {
-        if (this.has(key)) {
-            // This resets the age of the entry
-            this.delete(key)
-        } else if (this.size === this.maxSize) {
+        if (super.has(key)) {
+            // Resets the age of the entry
+            super.delete(key)
+        } else if (super.size === this.maxSize) {
             // The oldest key in the map
-            const { value } = this.keys().next()
+            const { value } = super.keys().next()
 
-            this.delete(value)
+            super.delete(value)
         }
 
         super.set(key, value)

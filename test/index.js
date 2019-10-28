@@ -14,7 +14,7 @@ FixedSize.Set.prototype.toString = toString
 FixedSize.Map.prototype.toString = toString
 
 // eslint-disable-next-line max-statements
-test('Fixed size sets', t => {
+test('Fixed size set', t => {
     const set = new FixedSize.Set(3)
 
     for (let i = 0; i < 4; i++) {
@@ -36,7 +36,7 @@ test('Fixed size sets', t => {
 })
 
 // eslint-disable-next-line max-statements
-test('Fixed size maps', t => {
+test('Fixed size map', t => {
     const map = new FixedSize.Map(3)
 
     for (let i = 0; i < 4; i++) {
@@ -53,6 +53,28 @@ test('Fixed size maps', t => {
 
     map.set(1, 1)
     t.equal(map.toString(), '3,4,1')
+
+    t.end()
+})
+
+// eslint-disable-next-line max-statements
+test('Fixed size array', t => {
+    const array = new FixedSize.Array(3)
+
+    for (let i = 0; i < 4; i++) {
+        array.push(i)
+    }
+
+    t.equal(array.toString(), '1,2,3')
+
+    array.splice(1, 1)
+    t.equal(array.toString(), '1,3')
+
+    array.push(4)
+    t.equal(array.toString(), '1,3,4')
+
+    array.push(1)
+    t.equal(array.toString(), '3,4,1')
 
     t.end()
 })

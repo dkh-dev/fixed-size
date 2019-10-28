@@ -1,12 +1,13 @@
 {
   "name": "@dkh-dev/fixed-size",
-  "version": "1.0.0",
-  "description": "Fixed-size sets and maps",
+  "version": "1.1.0",
+  "description": "Fixed-size sets, maps and arrays",
   "main": "index.js",
   "files": [
     "index.js",
     "set.js",
-    "map.js"
+    "map.js",
+    "array.js"
   ],
   "scripts": {
     "test": "node test",

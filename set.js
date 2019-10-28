@@ -1,7 +1,7 @@
 'use strict'
 
 class FixedSizeSet extends Set {
-    constructor(maxSize = 9007199254740991) {
+    constructor(maxSize = 4294967296) {
         super()
 
         if (maxSize < 1) {
@@ -12,14 +12,14 @@ class FixedSizeSet extends Set {
     }
 
     add(value) {
-        if (this.has(value)) {
-            // This resets the age of the value
-            this.delete(value)
-        } else if (this.size === this.maxSize) {
+        if (super.has(value)) {
+            // Resets the age of the value
+            super.delete(value)
+        } else if (super.size === this.maxSize) {
             // The oldest value in the set
-            const { value } = this.values().next()
+            const { value } = super.values().next()
 
-            this.delete(value)
+            super.delete(value)
         }
 
         super.add(value)
