@@ -1,8 +1,8 @@
 'use strict'
 
-const Set = require('./set')
-const Map = require('./map')
-const Array = require('./array')
+const Set = require('./lib/set')
+const Map = require('./lib/map')
+const Array = require('./lib/array')
 
 
 module.exports = {
