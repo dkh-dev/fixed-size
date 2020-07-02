@@ -79,8 +79,14 @@ test('Fixed size array', t => {
     array.push(2, 3)
     t.equal(array.toString(), '1,2,3')
 
-    array.unshift(4, 5)
-    t.equal(array.toString(), '4,5,1')
+    array.push(4, 5, 6, 7)
+    t.equal(array.toString(), '5,6,7')
+
+    array.unshift(1, 2)
+    t.equal(array.toString(), '1,2,5')
+
+    array.unshift(4, 5, 6, 7)
+    t.equal(array.toString(), '4,5,6')
 
     t.end()
 })
